@@ -1,0 +1,87 @@
+.header {
+    position: fixed;
+    top: 80px;
+    left: 80px;
+    z-index: 999;
+
+    width: 200px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0);
+}
+
+.header:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.header .gnb>ul ul {
+    display: none;
+}
+
+.section .title span {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 24px;
+
+    opacity: 0;
+    transform: translate(80px, 0);
+
+}
+
+.section.on .title span {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s;
+}
+
+.section .title h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 24px;
+
+    opacity: 0;
+    transform: translate(80px, 0);
+}
+
+.section.on .title h2 {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 0.2s;
+}
+
+.main_intro {
+    background: url(../images/main01.jpg) no-repeat fixed center center/cover;
+}
+
+.main_intro .inner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.main_info {
+    background: url(../images/main02.jpg) no-repeat fixed center center/cover;
+}
+
+
+.main_info .inner {
+    display: flex;
+    justify-content: center;
+}
+
+.main_showroom {
+    background: url(../images/main03.jpg) no-repeat fixed center center/cover;
+}
+
+.main_showroom .inner {
+    display: flex;
+    justify-content: flex-end;
+}
