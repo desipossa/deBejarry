@@ -2,6 +2,7 @@ $(function () {
 
     $('.wrap').fullpage({
         // css3: false,
+        anchors: ['intro'],
         navigation: true,
         afterLoad: function (a, idx) {
             console.log(a, idx);
@@ -13,7 +14,8 @@ $(function () {
 
     $('.header .gnb>ul>li>a').on('click', function (e) {
         e.preventDefault();
-        $(this).next().slideToggle();
+        $('.header .gnb>ul ul').stop().slideUp();
+        $(this).next().stop().slideToggle();
     })
 
 })
