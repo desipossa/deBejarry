@@ -7,10 +7,18 @@
     width: 200px;
     padding: 24px;
     background: rgba(255, 255, 255, 0);
+
+    transition: 0.2s;
+}
+
+.header.on {
+    visibility: hidden;
+    opacity: 0;
 }
 
 .header:hover {
     background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
 }
 
 .header .utils {
@@ -53,6 +61,51 @@
     display: block;
     font-size: 14px;
     line-height: 24px;
+}
+
+.anchor {
+    position: fixed;
+    top: 50%;
+    right: 80px;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    transition: 0.2s;
+}
+
+.anchor.on {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.anchor a {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    background: #333;
+
+    transform: rotate(45deg) scale(0.5);
+    transition: 0.2s;
+}
+
+.anchor a.on {
+    background: #ff6347;
+    transform: rotate(45deg) scale(1);
+}
+
+.section .title {
+    position: relative;
+}
+
+.section .title::before {
+    content: "";
+    position: absolute;
+    inset: -80px -40px -80px -40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
 }
 
 .section .title span {
@@ -159,6 +212,10 @@
     justify-content: flex-end;
 }
 
+.footer {
+    padding: 24px 0;
+}
+
 .footer .footer_wrap {
     margin: 0 80px;
 }
@@ -208,4 +265,59 @@
 
 .footer .ft_top .lnk a.b {
     font-weight: 800;
+}
+
+.footer .ft_bottom {
+    display: flex;
+    gap: 120px;
+
+    padding: 40px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.footer .ft_bottom .bnk {
+    position: relative;
+}
+
+.footer .ft_bottom .bnk::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -60px;
+
+    width: 1px;
+    background: #ddd;
+}
+
+.footer .ft_bottom h3 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.footer .ft_bottom table {}
+
+.footer .ft_bottom table th {
+    text-align: left;
+    height: 24px;
+
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.footer .ft_bottom table td {
+    text-align: left;
+    height: 24px;
+
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer address {
+    padding: 32px 0;
+    font-size: 12px;
+    line-height: 16px;
 }
