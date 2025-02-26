@@ -4,6 +4,7 @@ $(function () {
         // css3: false,
         anchors: ['intro', 'info', 'showroom', 'footer'],
         // navigation: true,
+        fixedElements: '.header, .anchor',
         afterLoad: function (a, idx) {
             console.log(a, idx);
             $('.section').removeClass('on');
